@@ -1,0 +1,43 @@
+[{
+    "identifier":"createdBy",
+    "label": "CreatedBy",
+    "dataType": "text",
+    "constraint": "NOT NULL",
+    "rules": ""
+}, {
+    "identifier":"description",
+    "label": "Description",
+    "dataType": "text",
+    "constraint": "",
+    "rules": ""
+}, {
+    "identifier":"severity",
+    "label": "Severity",
+    "dataType": "number",
+    "constraint": "",
+    "rules": ""
+}, {
+    "identifier":"status",
+    "label": "Status",
+    "dataType": "enum",
+    "constraint": "",
+    "rules": ""
+}, {
+    "identifier":"cancelledReason",
+    "label": "CancelledReason",
+    "dataType": "enum",
+    "constraint": "",
+    "rules": "Status == 2"
+}, {
+    "identifier":"cancelledOtherDescription",
+    "label": "CancelledOtherDescription",
+    "dataType": "text",
+    "constraint": "",
+    "rules": "CancelledReason == 2"
+}, {
+    "identifier":"comments",
+    "label": "Comments",
+    "dataType": "text",
+    "constraint": "",
+    "rules": "Status == 1"
+}]

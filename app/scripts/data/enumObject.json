@@ -1,0 +1,15 @@
+[{
+    "fieldName": "Status",
+    "dataType": "number",
+    "enums": {
+        "COMPLETED": 1,
+        "CANCELLED": 2
+    }
+}, {
+    "fieldName": "CancelledReason",
+    "dataType": "number",
+    "enums": {
+        "ENDUSER": 1,
+        "OTHERS": 2
+    }
+}]
