@@ -1,16 +1,15 @@
 /*
  * Services
  */
-'use strict';
-var serviceModule = angular.module('myApp.services', []);
+(function() {
+    'use strict';
+    var serviceModule = angular.module('myApp.services', []);
 
-serviceModule.factory('ajiraFactory', ['$http', function(http) {
+    serviceModule.factory('ajiraFactory', ['$http', function(http) {
         return {
             getApplicationObject: function() {
                 return http.get('scripts/data/applicationObject.json');
-            },
-            getEnumObject: function() {
-                return http.get('scripts/data/enumObject.json');
             }
         };
     }]);
+}());

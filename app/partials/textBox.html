@@ -1,6 +1,9 @@
-<div class="form-group">
+<div class="form-group" ng-class="{ 'has-error' : userFieldForm.$dirty && userFieldForm.$error.required }">
   <ng-form name="userFieldForm">
-    <label>{{field.label}}</label>
-    <input type="text" class="form-control" name="{{field.label}}" ng-model="textBoxValue" required>    
+    <label class="control-label col-sm-2" for={{field.label}}>{{field.label}}{{field.required? "*":""}}</label>   
+    	<div class="col-sm-10">
+    	<input type="{{field.dataType}}" class="form-control" name="{{field.identifier}}" ng-model="selectedValue" required placeholder="Enter {{field.label}}" ng-required='field.required'>
+    	<span  data-ng-show=" {{'userFieldForm.$dirty && userFieldForm.$error.required'}}">Required!</span>
+    	</div>
   </ng-form>
 </div>

@@ -1,43 +1,51 @@
 [{
     "identifier":"createdBy",
-    "label": "CreatedBy",
+    "label": "Created By",
     "dataType": "text",
-    "constraint": "NOT NULL",
+    "required": true,
     "rules": ""
 }, {
     "identifier":"description",
     "label": "Description",
     "dataType": "text",
-    "constraint": "",
+    "required": "",
     "rules": ""
 }, {
     "identifier":"severity",
     "label": "Severity",
     "dataType": "number",
-    "constraint": "",
+    "required": true,
     "rules": ""
 }, {
     "identifier":"status",
     "label": "Status",
     "dataType": "enum",
-    "constraint": "",
-    "rules": ""
+    "required": "",
+    "rules": "",
+    "options":{
+        "1": "COMPLETED",
+        "2": "CANCELLED"
+    }
 }, {
     "identifier":"cancelledReason",
-    "label": "CancelledReason",
+    "label": "Cancelled Reason",
     "dataType": "enum",
-    "constraint": "",
-    "rules": "Status == 2"
+    "required": "",
+    "rules": "status_==_2",
+    "options":{ 
+        "1": "ENDUSER",
+        "2": "OTHERS"
+    }
 }, {
     "identifier":"cancelledOtherDescription",
-    "label": "CancelledOtherDescription",
+    "label": "Cancelled Other Description",
     "dataType": "text",
-    "constraint": "",
-    "rules": "CancelledReason == 2"
+    "required": "",
+    "rules": "cancelledReason_==_2"
 }, {
     "identifier":"comments",
     "label": "Comments",
     "dataType": "text",
-    "constraint": "",
-    "rules": "Status == 1"
+    "required": "",
+    "rules": "status_==_1"
 }]

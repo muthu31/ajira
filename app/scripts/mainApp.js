@@ -1,8 +1,8 @@
 (function(){
 'use strict';
 var myApp = angular.module('myApp', ['ngRoute', // Route service
-    'myApp.utilityService', 'myApp.constants', // MISC
-    'myApp.directives', 'myApp.filters', // MISC
+    'myApp.constants', // MISC
+    'myApp.directives', // MISC
     'myApp.services', // Services
     'myApp.controller' // controller
 ]);

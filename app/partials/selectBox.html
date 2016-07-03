@@ -1,0 +1,11 @@
+<div class="form-group">
+  <ng-form name="userFieldForm">
+    <label class="control-label col-sm-2" for={{field.label}}>{{field.label}}{{field.required? "*":""}}</label>
+    <div class="col-sm-10">
+    <select ng-model="selectedValue" class="form-control" name="{{field.label}}" ng-required='field.required'>
+      <option selected="" value="">Choose {{field.label}}</option>
+      <option value={{key}} ng-repeat="(key, value) in field.options">{{value}}</option>
+    </select> 
+    </div>   
+  </ng-form>
+</div>

@@ -1,11 +1,12 @@
 /*
  * Constants
  */
-'use strict';
-var constantsModule = angular.module('myApp.constants', []);
+(function() {
+    'use strict';
+    var constantsModule = angular.module('myApp.constants', []);
 
-constantsModule.constant('ajiraConstants', {
-    textBoxDirectiveUrl: 'partials/textBox.html',
-    loginErrorUsernamePassword: 'You must enter username and password to log in',
-    loginErrorInvalidCredentials: 'Invalid credentials,Try Again!'
-});
+    constantsModule.constant('ajiraConstants', {
+        textBoxDirectiveUrl: 'partials/textBox.html',
+        selectBoxDirectiveUrl: 'partials/selectBox.html'
+    });
+}());
