@@ -10,10 +10,15 @@
             restrict: 'A',
             templateUrl: ajiraConstants.textBoxDirectiveUrl,
             scope: {
-                selectedValue: "=",
+                userModel: "=",
                 field: "="
             },
-            replace: true
+            replace: true,
+            link: function(scope, element, attrs){
+                scope.$on("$destroy", function(){
+                    delete scope.userModel[scope.field.identifier];
+                });
+            }
         };
     }]);
     directiveModule.directive('enumField', ['ajiraConstants', function(ajiraConstants) {
@@ -21,10 +26,15 @@
             restrict: 'A',
             templateUrl: ajiraConstants.selectBoxDirectiveUrl,
             scope: {
-                selectedValue: "=",
+                userModel: "=",
                 field: "="
             },
-            replace: true
+            replace: true,
+            link: function(scope, element, attrs){
+                scope.$on("$destroy", function(){
+                     delete scope.userModel[scope.field.identifier];
+                });
+            }
         };
     }]);
 }());

@@ -31,7 +31,7 @@
     "label": "Cancelled Reason",
     "dataType": "enum",
     "required": "",
-    "rules": "status_==_2",
+    "rules": "this.status==2",
     "options":{ 
         "1": "ENDUSER",
         "2": "OTHERS"
@@ -41,11 +41,11 @@
     "label": "Cancelled Other Description",
     "dataType": "text",
     "required": "",
-    "rules": "cancelledReason_==_2"
+    "rules": "this.cancelledReason==2"
 }, {
     "identifier":"comments",
     "label": "Comments",
     "dataType": "text",
     "required": "",
-    "rules": "status_==_1"
+    "rules": "this.status==1&&this.createdBy=='admin'"
 }]
